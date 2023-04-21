@@ -1,1 +1,42 @@
 Link para download do Git: https://git-scm.com/downloads
+
+- O git é um terminal que serve para gerenciar o versionamento dos seus projetos.
+
+- O github é um site que serve como repositório e compartilhamento dos projetos 
+com outras pessoas que estão trabalhando em conjunto.
+
+
+---GIT
+
+Objetos internos do GIT:
+BLOBS (contém o tipo do objeto, o tamanho, \0 e o conteúdo do arquivo)
+TREES (Aponta para um blob e armazena nome e tipo do arquivo, tamanho, \0)
+COMMITS (Aponta para uma árvore, parente ou último commit realizado antes dele, para o autor e uma menssagem e armazena o tamanho)
+
+Comandos:
+
+mkdir : criar diretório
+ctrl+l : limpar tela
+ls : listar (-a mostra os arquivos ocultos)
+mv : mover arquivos entre pastas (Ex.: mv arquivo.txt ./pastaqualquer/) 
+git config --list (lista as configurações do seu git)
+git init : inicia o repositório do git dentro da pasta
+git add : colocar arquivos no stage prontos para commitar 
+git commit :
+git push : leva o seus arquivos do repositório local para o repositório remoto
+
+PARA VERSIONAMENTO/GERENCIAMENTO DO CÓDIGO
+- Cria-se o diretório e dá um git init dentro da pasta. Dessa forma o git cria uma pasta oculta .git dentro do diretório para o gerenciamento dos seus arquivos.
+- Quando adicionar algum arquivo dentro da pasta, usar o comando "git add" para mover o arquivo e poder dar o commit.
+- Quando for dar o commit, deixar uma menssagem que indica o que foi feito com a flag -m "menssagem".
+
+
+---Github
+
+Criando um repositório:
+- Na sua conta do github, clica em new repository, coloca um nome e adiciona uma descrição. (deixa como público e marca "Add a README file);
+- Depois de criado você precisa apontar o seu repositório local para o github;
+- Copie o url do seu repositório (ex.: https://github.com/danielwallach/livro-receitas.git);
+- Vá no git bash e adicione a origem para onde você enviará os arquivos através do comando git remote add "um nome para a url" (Ex.: git remote add origin https://github.com/danielwallach/livro-receitas.git)
+- Dê um git remote -v e confirme que agora você tem uma lista de repositórios cadastrados 
+- Agora "empurre" o seu código do repositório local para o remoto usando o comando git push origin master (master é o nome da branch que estamos enviando. Poderia ser main também como convenção)
